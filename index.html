@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaMentor</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+  <main class="main">
+      <div class="window">
+        <div class="window__left">
+          <a href="#" class="window__logo">
+            <img src="img/logo.svg" alt="logo" class="window__logo-image">
+          </a>
+        </div>
+        <div class="window__right">
+          <h2 class="title">Get iintoo it today</h2>
+          <p class="paragraph">There is no charge or obligation upon registration.</p>
+          <div class="social__buttons">
+            <button class="social__button facebook__btn"><span class="facebook__btn-text">Register with
+                Facebook</span></button>
+            <button class="social__button linkedin__btn"><span class="linkedin__btn-text">Register with
+                Linkedin</span></button>
+          </div>
+          <span class="separator">or</span>
+          <form class="form">
+            <div class="form__fieldset contacts">
+              <p class="form__fieldset-wrapper form__fieldset-email">
+                <label class="form__label" for="email">Email</label>
+                <input class="form__input" type="email" name="email" id="email">
+              </p>
+              <p class="form__fieldset-wrapper form__fieldset-contacts">
+                <label class="form__label" for="phone">Phone</label>
+                <input class="form__input" type="tel" name="tel" id="phone">
+              </p>
+            </div>
+            <h3 class="form__title">What type of investor are you?</h3>
+            <p class="form__paragraph">Select the type of investor you are below.</p>
+            <div class="form__fieldset investor">
+              <div class="radio__wrapper">
+                <ul class="form__list">
+                  <li class="form__radio radio individual">
+                    <input class="radio__input input-individual" type="radio" name="investor-type" value="individual"
+                      id="individual">
+                    <label class="radio__label" for="individual">Individual</label>
+                    <img class="radio__img" src="img/icon-important.png" alt="important">
+                  </li>
+                  <li class="form__radio radio">
+                    <input class="radio__input" type="radio" name="investor-type" value="business" id="business">
+                    <label class="radio__label" for="business">Business</label>
+                    <img class="radio__img" src="img/icon-important.png" alt="important">
+                  </li>
+                  <li class="form__radio radio">
+                    <input class="radio__input" type="radio" name="investor-type" value="IRA" id="ira">
+                    <label class="radio__label" for="ira">IRA</label>
+                    <img class="radio__img" src="img/icon-important.png" alt="important">
+                  </li>
+                  <li class="form__radio radio">
+                    <input class="radio__input" type="radio" name="investor-type" value="trust" id="trust">
+                    <label class="radio__label" for="trust">Trust</label>
+                    <img class="radio__img" src="img/icon-important.png" alt="important">
+                  </li>
+                </ul>
+                <div class="radio__description">I am a natural person investing on my own behalf as a sole owner, joint
+                  tenant, or tenant in common.</div>
+              </div>
+              <div class="form__fieldset agree">
+                <input class="checkbox__input visually-hidden" type="checkbox" name="rock" id="rock-item">
+                <label class="checkbox__label" for="rock-item">I agree to the terrms and receiving notifiction from
+                  iintoo <a href="checkbox__link">View full terms</a></label>
+              </div>
+            </div>
+            <button class="form__btn" type="submit">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

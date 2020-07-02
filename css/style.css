@@ -1,0 +1,522 @@
+@font-face {
+  font-family: 'Barlow';
+  src: url('../font/BarlowCondensed-Regular.otf') format("otf");
+  font-style: normal;
+  font-weight: normal;
+ }
+
+ @font-face {
+  font-family: 'BarlowBold';
+  src: url('../font/BarlowCondensed-Bold.otf') format("otf");
+  font-style: normal;
+  font-weight: 600;
+ }
+
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: 'Barlow', sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+li {
+  display: block;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  background-color:#EFF6FF;
+  width: 1600px;
+  /*height: 1200px;*/
+  padding: 50px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.window {
+  display: flex;
+  width: 1500px;
+  height: auto;
+} 
+
+.window__left {
+  height: 1000px;
+  background: url('../img/bg.jpg') no-repeat 0 0;
+  width: 50%;
+  background-size: cover;
+}
+
+.window__logo {
+  margin-left: 50px;
+}
+
+.window__logo-image {
+  width: 200px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.window__right {
+  background-color: #fff;
+  width: 50%;
+  padding: 100px 80px;
+  font-family: 'Barlow', sans-serif;
+  color: #2A4A5C;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 32px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  color: #96A5B1;
+  margin: 0;
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+.social__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.social__button {
+  border: none;
+  padding: 15px;
+  color: #fff;
+  width: 280px;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+button:active {
+  opacity: 0.3;
+}
+
+.facebook__btn {
+  background-color: #255A9B;
+}
+
+.linkedin__btn {
+  background-color: #0076B6;
+}
+
+.linkedin__btn-text,
+.facebook__btn-text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.facebook__btn-text:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('../img/facebook.svg') no-repeat 0 0;
+  margin-right: 25px;
+}
+
+.linkedin__btn-text::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url('../img/linkedin.svg') no-repeat 0 0;
+  margin-right: 25px;
+  background-size: contain;
+}
+
+.separator {
+  display: block;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  width: 100px;
+  height: 1px;
+  background-color: #AFAFAF;
+}
+
+.separator::before {
+  margin-right: 10px;
+}
+
+.separator::after {
+  margin-left: 10px;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.form__fieldset-wrapper {
+  margin: 0;
+  width: 280px;
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 14px;
+  color: #AFAFAF;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding: 30px 10px 10px 10px;
+}
+
+.form__input:focus {
+  border: 1px solid #EEEEEE;
+  border-left: 2px solid #3698FB;
+}
+
+.form__title {
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form__paragraph {
+  margin: 0;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.form__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form__radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 20%;
+}
+
+.radio__label {
+  color: #000000;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.radio__label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #EEEEEE;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-right: 15px;
+}
+
+.radio__input:checked + .radio__label:before {
+  background-color: #3698FB;
+}
+
+.radio__input:checked + .radio__label::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 6px;
+  right: 102px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.radio__img {
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.radio__description {
+  color: #AFAFAF;
+  width: 300px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  margin-bottom: 30px;
+  font-size: 18px;
+  display: none;
+}
+
+.radio__input:checked ~ .radio__description {
+  display: block;
+}
+
+.radio__input {
+  display: none;
+}
+.agree {
+  margin-bottom: 30px;
+}
+
+.checkbox__label {
+  color: #AFAFAF;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.checkbox__label a:hover {
+  opacity: 0.3;
+}
+
+.checkbox__label a:active {
+  text-decoration: none;
+}
+
+.form__btn {
+  width: 280px;
+  border: none;
+  padding: 16px 30px;
+  background-color: #3698FB;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'BarlowBold', sans-serif;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+@media (max-width: 1400px) {
+  .main {
+    height: 1200px
+  }
+  .window {
+    width: 900px;
+  }
+
+  .window__left {
+    height: auto;
+  }
+  .window__right {
+    padding: 50px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+  .paragraph {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .social__buttons {
+    margin-bottom: 30px;
+  }
+  .social__button {
+    width: 170px;
+  }
+
+  .linkedin__btn-text, .facebook__btn-text {
+    font-size: 12px;
+  }
+  .facebook__btn-text:before {
+    margin-right: 10px;
+  }
+
+  .separator {
+    margin-bottom: 30px;
+  }
+  .form__fieldset-wrapper {
+    width: 170px;
+  }
+  .contacts {
+    margin-bottom: 30px;
+  }
+  .form__title {
+    font-size: 21px;
+  }
+
+  .form__paragraph {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .radio__label {
+    font-size: 14px;
+  }
+
+  .form__list {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form__radio {
+    margin-bottom: 10px;
+  }
+  .radio__label::before {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+  }
+
+  .radio__input:checked + .radio__label::after {
+    right: 8px;
+    top: 5px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .radio__wrapper {
+    display: flex;
+  }
+  .radio__description {
+    width: 250px;
+    margin-left: 5px;
+    margin-bottom: 60px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 900px) {
+  .window {
+    width: 500px;
+    flex-direction: column;
+  }
+
+  .window__left {
+    width:100%;
+  }
+  .window__right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .window {
+    width: 300px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .paragraph {
+    font-size: 12px;
+  }
+
+  .social__buttons {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .social__button {
+    width:100%;
+    margin-bottom: 10px;
+  }
+
+  .separator {
+    margin-bottom: 20px;
+  }
+
+  .contacts {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .form__fieldset-wrapper {
+    width:100%;
+    margin-bottom: 10px;
+  }
+
+  .form__title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .form__paragraph {
+    font-size: 10px;
+  }
+
+  .radio__description {
+    width: 100px;
+    font-size: 10px;
+    margin-bottom: 30px;
+  }
+  .radio__input:checked + .radio__label::after {
+    right: 8px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .agree {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox__label {
+    font-size: 12px;
+  }
+
+  .form__btn {
+    width: 200px;
+  }
+
+}
